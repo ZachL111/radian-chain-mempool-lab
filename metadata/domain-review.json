@@ -1,0 +1,73 @@
+{
+  "repo": "radian-chain-mempool-lab",
+  "language": "C",
+  "category": "Blockchain tooling",
+  "goal": "Implement a C blockchain tooling project for mempool state machine modeling, using transition tables and invalid-transition tests.",
+  "review_model": {
+    "terms": [
+      "event finality",
+      "nonce pressure",
+      "settlement risk",
+      "proof depth"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "event finality",
+      "signal": 76,
+      "slack": 20,
+      "drag": 11,
+      "confidence": 57,
+      "score": 196,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "nonce pressure",
+      "signal": 52,
+      "slack": 46,
+      "drag": 8,
+      "confidence": 85,
+      "score": 211,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "settlement risk",
+      "signal": 47,
+      "slack": 50,
+      "drag": 18,
+      "confidence": 55,
+      "score": 145,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "proof depth",
+      "signal": 54,
+      "slack": 30,
+      "drag": 28,
+      "confidence": 60,
+      "score": 114,
+      "lane": "watch"
+    },
+    {
+      "name": "stale",
+      "focus": "event finality",
+      "signal": 73,
+      "slack": 25,
+      "drag": 18,
+      "confidence": 86,
+      "score": 203,
+      "lane": "ship"
+    }
+  ]
+}

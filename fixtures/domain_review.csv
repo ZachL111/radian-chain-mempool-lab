@@ -1,0 +1,6 @@
+name,focus,signal,slack,drag,confidence,score,lane
+baseline,event finality,76,20,11,57,196,ship
+stress,nonce pressure,52,46,8,85,211,ship
+edge,settlement risk,47,50,18,55,145,ship
+recovery,proof depth,54,30,28,60,114,watch
+stale,event finality,73,25,18,86,203,ship
